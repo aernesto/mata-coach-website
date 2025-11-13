@@ -3,171 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 
-      This is the title that appears in the browser tab.
-      Update "Mata" if you use a different name. 
-    -->
     <title>Mata Wellness Coaching</title>
     
-    <!-- This script loads Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- This configures Tailwind and sets the "Inter" font -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              // Using Lora for a classic, elegant serif feel
+              // Fallback to generic serif
+              serif: ['Lora', 'serif'], 
             },
             colors: {
-              // You can change this 'teal' to any color you like
-              // E.g., 'indigo', 'blue', 'emerald'
-              // See colors here: https://tailwindcss.com/docs/customizing-colors
-              primary: tailwind.colors.teal,
+              // Custom color palette for manuscript feel
+              paper: '#fdf8ee',  // Light, aged paper background
+              ink: '#2c2c2c',    // Dark ink for text
+              accent: '#8B4513', // A subtle earthy accent if needed, can be adjusted
+              primary: { // Re-defining primary for consistency with new palette
+                  50: '#fef3e7',
+                  100: '#fdf8ee',
+                  200: '#fbeed9',
+                  300: '#f9e3c4',
+                  400: '#f6d5a7',
+                  500: '#f3c78a', // A warm, parchment-like primary
+                  600: '#e4b677',
+                  700: '#c29864',
+                  800: '#a07b51',
+                  900: '#7e5e3d',
+              }
             }
           }
         }
       }
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-sans text-gray-800 antialiased">
+<body class="font-serif text-ink antialiased bg-paper">
 
-    <!-- Header & Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div>
-                <!-- 
-                  EDIT THIS: 
-                  Update "Mata Coaching" with your name or brand.
-                -->
-                <a href="#" class="text-2xl font-bold text-gray-900">
+    <!-- Header & Navigation --><header class="bg-primary-50 shadow-sm sticky top-0 z-50 border-b border-primary-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center max-w-4xl">
+            <div class="flex items-center space-x-3">
+                <!-- Logo will go here --><img src="logo.png" alt="Mata Coaching Logo" class="h-10 w-10">
+                <a href="#" class="text-2xl font-bold text-ink">
                     Mata Coaching
                 </a>
             </div>
             <div class="space-x-6">
-                <!-- These links jump to sections on the page -->
-                <a href="#services" class="text-gray-600 hover:text-primary-600 transition duration-200">Services</a>
-                <a href="#about" class="text-gray-600 hover:text-primary-600 transition duration-200">My Approach</a>
-                <a href="#contact" class="text-gray-600 hover:text-primary-600 transition duration-200">Contact</a>
+                <a href="#services" class="text-ink hover:text-primary-800 transition duration-200">Services</a>
+                <a href="#about" class="text-ink hover:text-primary-800 transition duration-200">My Approach</a>
+                <a href="#contact" class="text-ink hover:text-primary-800 transition duration-200">Contact</a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
+    <!-- Main Content --><main class="container mx-auto max-w-4xl px-6">
         
-        <!-- Hero Section -->
-        <section id="home" class="bg-primary-50">
-            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
-                <!-- 
-                  EDIT THIS: 
-                  This is your main headline.
-                -->
-                <h1 class="text-4xl md:text-6xl font-extrabold text-primary-900 leading-tight">
-                    A Holistic Path to Wellness
-                </h1>
-                <p class="mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-                    Welcome. I offer wellness coaching that integrates mind, body, and spirit, guided by a unique journey through science, psychology, and the arts.
-                </p>
-                <a href="#contact" class="mt-10 inline-block bg-primary-600 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-primary-700 transition duration-300 transform hover:-translate-y-1">
-                    Book a Consultation
-                </a>
-            </div>
+        <!-- Hero Section --><section id="home" class="py-24 md:py-32 text-center border-b border-primary-200 mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-ink leading-tight">
+                A Holistic Path to Wellness
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-ink max-w-2xl mx-auto">
+                Welcome. I offer wellness coaching that integrates mind, body, and spirit, guided by a unique journey through science, psychology, and the arts.
+            </p>
+            <a href="#contact" class="mt-10 inline-block bg-ink text-paper font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-primary-800 transition duration-300 transform hover:-translate-y-1">
+                Book a Consultation
+            </a>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="py-20 md:py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
-                    What I Offer
-                </h2>
-                <!-- 
-                  EDIT THIS: 
-                  Update these services to match what you offer. 
-                  These are just placeholders.
-                -->
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
-                        <h3 class="text-2xl font-bold text-primary-800 mb-4">Mind-Body Integration</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Connecting cognitive insights with embodied practices like yoga and movement to foster whole-self alignment.
-                        </p>
-                    </div>
-                    <!-- Service 2 -->
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
-                        <h3 class="text-2xl font-bold text-primary-800 mb-4">Personal Growth Coaching</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Using analytical and creative tools to navigate life's decisions, unlock potential, and find your unique purpose.
-                        </p>
-                    </div>
-                    <!-- Service 3 -->
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
-                        <h3 class="text-2xl font-bold text-primary-800 mb-4">Holistic Wellness</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            A comprehensive approach drawing from psychology, neuroscience, and ancient wisdom to cultivate lasting happiness.
-                        </p>
-                    </div>
+        <!-- Services Section --><section id="services" class="py-12 md:py-16 border-b border-primary-200 mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                What I Offer
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 --><div class="bg-primary-50 p-8 rounded-xl shadow-md border border-primary-200">
+                    <h3 class="text-2xl font-bold text-ink mb-4">Mind-Body Integration</h3>
+                    <p class="text-ink leading-relaxed">
+                        Connecting cognitive insights with embodied practices like yoga and movement to foster whole-self alignment.
+                    </p>
                 </div>
-            </div>
-        </section>
-
-        <!-- About (My Approach) Section -->
-        <section id="about" class="py-20 md:py-24 bg-primary-50">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
-                    My Approach
-                </h2>
-                <!-- 
-                  This is the narrative crafted from your info.
-                  Feel free to edit, but it covers all your points.
-                -->
-                <div class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed space-y-7">
-                    <p>
-                        My path to wellness coaching has been a unique blend of analytical rigor and creative exploration. I'm grounded in a deep understanding of the human mind, from an <strong class="font-medium text-gray-900">MA in Clinical Psychology</strong> to a <strong class="font-medium text-gray-900">PhD in Mathematics</strong> applied to computational neuroscience and decision-making. I’ve spent years studying how we think, both academically as a postdoc at UPenn and professionally as a data scientist.
+                <!-- Service 2 --><div class="bg-primary-50 p-8 rounded-xl shadow-md border border-primary-200">
+                    <h3 class="text-2xl font-bold text-ink mb-4">Personal Growth Coaching</h3>
+                    <p class="text-ink leading-relaxed">
+                        Using analytical and creative tools to navigate life's decisions, unlock potential, and find your unique purpose.
                     </p>
-                    <p>
-                        But we are more than just our minds. I believe in a holistic path that embraces the whole self. This belief comes from my own life-long explorations: from the discipline of 10+ years of piano and kung-fu to the creative freedom of <strong class="font-medium text-gray-900">improv acting, clowning, and dance</strong>. My passion for yoga, tantra, and ancient wisdom traditions informs a practice rooted in both body and spirit.
-                    </p>
-                    <p>
-                        Born in Mexico and raised in France, I'm a <strong class="font-medium text-gray-900">trilingual (French, Spanish, English)</strong> individual who has lived and studied across the UK and US. I love connecting with people from all walks of life. My curiosity is wide—from metal music to quantum physics, from philosophy to simply laughing.
-                    </p>
-                    <p class="font-medium text-primary-800 text-xl">
-                        I believe in human potential, and my core motivation is to help you find your own authentic path to happiness and well-being.
+                </div>
+                <!-- Service 3 --><div class="bg-primary-50 p-8 rounded-xl shadow-md border border-primary-200">
+                    <h3 class="text-2xl font-bold text-ink mb-4">Holistic Wellness</h3>
+                    <p class="text-ink leading-relaxed">
+                        A comprehensive approach drawing from psychology, neuroscience, and ancient wisdom to cultivate lasting happiness.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 md:py-24 bg-white text-center">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8">
-                    Get in Touch
-                </h2>
-                <p class="text-xl text-gray-700 max-w-lg mx-auto mb-10">
-                    Ready to start your journey? Send me an email to schedule a free consultation.
+        <!-- About (My Approach) Section --><section id="about" class="py-12 md:py-16 border-b border-primary-200 mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                My Approach
+            </h2>
+            <div class="max-w-3xl mx-auto text-lg text-ink leading-relaxed space-y-7">
+                <p>
+                    My path to wellness coaching has been a unique blend of analytical rigor and creative exploration. I'm grounded in a deep understanding of the human mind, from an <strong class="font-medium text-ink">MA in Clinical Psychology</strong> to a <strong class="font-medium text-ink">PhD in Mathematics</strong> applied to computational neuroscience and decision-making. I’ve spent years studying how we think, both academically as a postdoc at UPenn and professionally as a data scientist.
                 </p>
-                <!-- 
-                  EDIT THIS: 
-                  Replace "your-email@mata.coach" with your actual email.
-                  The "mailto:" link will open the user's email client.
-                -->
-                <a href="mailto:your-email@mata.coach" class="inline-block bg-primary-600 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-primary-700 transition duration-300 transform hover:-translate-y-1">
-                    Email Me
-                </a>
+                <p>
+                    But we are more than just our minds. I believe in a holistic path that embraces the whole self. This belief comes from my own life-long explorations: from the discipline of 10+ years of piano and kung-fu to the creative freedom of <strong class="font-medium text-ink">improv acting, clowning, and dance</strong>. My passion for yoga, tantra, and ancient wisdom traditions informs a practice rooted in both body and spirit.
+                </p>
+                <p>
+                    Born in Mexico and raised in France, I'm a <strong class="font-medium text-ink">trilingual (French, Spanish, English)</strong> individual who has lived and studied across the UK and US. I love connecting with people from all walks of life. My curiosity is wide—from metal music to quantum physics, from philosophy to simply laughing.
+                </p>
+                <p class="font-medium text-primary-800 text-xl">
+                    I believe in human potential, and my core motivation is to help you find your own authentic path to happiness and well-being.
+                </p>
             </div>
+        </section>
+
+        <!-- Contact Section --><section id="contact" class="py-12 md:py-16 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">
+                Get in Touch
+            </h2>
+            <p class="text-xl text-ink max-w-lg mx-auto mb-10">
+                Ready to start your journey? Send me an email to schedule a free consultation.
+            </p>
+            <a href="mailto:your-email@mata.coach" class="inline-block bg-ink text-paper font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-primary-800 transition duration-300 transform hover:-translate-y-1">
+                Email Me
+            </a>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-400 py-12">
-        <div class="container mx-auto px-6 text-center">
-            <!-- 
-              EDIT THIS: 
-              Update "Mata Coaching" and the year.
-            -->
+    <!-- Footer --><footer class="bg-ink text-primary-300 py-12">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
             <p>&copy; 2025 Mata Coaching. All rights reserved.</p>
         </div>
     </footer>
