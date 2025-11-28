@@ -1,24 +1,18 @@
 document.addEventListener('DOMContentLoaded', function(){
-  var toggle = document.getElementById('menu-toggle');
-  toggle && toggle.addEventListener('click', function(){
-    var nav = document.querySelector('.main-nav');
-    if(!nav) return;
-    if(nav.style.display === 'flex'){
-      nav.style.display = '';
-    } else {
-      nav.style.display = 'flex';
-      nav.style.flexDirection = 'column';
-      nav.style.gap = '12px';
-      nav.style.position = 'absolute';
-      nav.style.top = '64px';
-      nav.style.right = '20px';
-      nav.style.background = 'rgba(0,0,0,0.85)';
-      nav.style.padding = '12px';
-      nav.style.borderRadius = '6px';
-    }
+  // Dropdown menu hover support (for desktop)
+  var dropdowns = document.querySelectorAll('.nav-dropdown');
+  dropdowns.forEach(function(dd){
+    dd.addEventListener('mouseenter', function(){
+      var menu = this.querySelector('.dropdown-menu');
+      if(menu) menu.style.display = 'block';
+    });
+    dd.addEventListener('mouseleave', function(){
+      var menu = this.querySelector('.dropdown-menu');
+      if(menu) menu.style.display = 'none';
+    });
   });
 
-  // contact form placeholder behavior
+  // Contact form placeholder behavior
   var form = document.querySelector('.contact-form');
   if(form){
     form.addEventListener('submit', function(e){

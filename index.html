@@ -10,57 +10,69 @@
             <link rel="stylesheet" href="/css/styles.css">
         </head>
     <body>
-            <!-- Header: centered crest + nav beneath to match reference layout -->
-            <header class="site-header">
-                <div class="header-top">
-                    <div class="container header-top-inner">
-                        <div class="brand-wrap">
-                            <h1 class="brand-title">MYSTERY TATTOO CLUB</h1>
-                            <p class="brand-sub">SALON DE TATOUAGE À PARIS</p>
-                        </div>
-                        <!-- decorative emblem (placeholder) -->
-                        <div class="emblem" aria-hidden="true">
-                            <!-- stylized ornamental svg, decorative only -->
-                            <svg width="220" height="80" viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="g" x1="0" x2="1">
-                                        <stop offset="0" stop-color="#b88a32" />
-                                        <stop offset="1" stop-color="#7a5a28" />
-                                    </linearGradient>
-                                </defs>
-                                <g fill="url(#g)">
-                                    <path d="M110 6c18 0 32 10 32 22s-14 22-32 22-32-10-32-22 14-22 32-22z" opacity="0.95"/>
-                                    <rect x="104" y="20" width="12" height="40" rx="6"/>
-                                    <path d="M48 40c14-8 40-12 62-12s48 4 62 12" stroke="#6b4b1f" stroke-width="1" fill="none"/>
-                                </g>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
+    <!-- Header: centered branding (scrolls away) + sticky nav bar -->
+    <header class="site-header">
+      <!-- Top section: Brand + emblem (hides on scroll) -->
+      <div class="header-brand">
+        <div class="container header-brand-inner">
+          <div class="brand-wrap">
+            <h1 class="brand-title">MYSTERY TATTOO CLUB</h1>
+            <p class="brand-sub">SALON DE TATOUAGE À PARIS</p>
+          </div>
+          <!-- decorative emblem (placeholder) -->
+          <div class="emblem" aria-hidden="true">
+            <svg width="220" height="80" viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g" x1="0" x2="1">
+                  <stop offset="0" stop-color="#b88a32" />
+                  <stop offset="1" stop-color="#7a5a28" />
+                </linearGradient>
+              </defs>
+              <g fill="url(#g)">
+                <path d="M110 6c18 0 32 10 32 22s-14 22-32 22-32-10-32-22 14-22 32-22z" opacity="0.95"/>
+                <rect x="104" y="20" width="12" height="40" rx="6"/>
+                <path d="M48 40c14-8 40-12 62-12s48 4 62 12" stroke="#6b4b1f" stroke-width="1" fill="none"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
 
-                <div class="container nav-row">
-                    <nav class="main-nav">
-                        <a href="#">Accueil</a>
-                        <a href="#artists">Artistes</a>
-                        <a href="#hygiene">Hygiène & Soins</a>
-                        <a href="#tarifs">Tarifs</a>
-                        <a href="#faq">FAQ</a>
-                        <a href="#contact" class="cta">Contact</a>
-                    </nav>
-                </div>
+      <!-- Sticky nav bar -->
+      <nav class="nav-sticky">
+        <div class="container nav-inner">
+          <a href="#" class="nav-item">Accueil</a>
+          <div class="nav-dropdown">
+            <a href="#artists" class="nav-item nav-item-dropdown">Artistes <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="#">Artist One</a>
+              <a href="#">Artist Two</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a href="#hygiene" class="nav-item nav-item-dropdown">Hygiène & Soins <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="#">Hygiene Info</a>
+              <a href="#">Care Guide</a>
+            </div>
+          </div>
+          <a href="#tarifs" class="nav-item">Tarifs</a>
+          <a href="#faq" class="nav-item">FAQ</a>
+          <a href="#actu" class="nav-item">Actu</a>
+          <a href="#contact" class="nav-item">Contact</a>
+        </div>
+      </nav>
 
-                <!-- vertical social buttons on the right (floating) -->
-                <aside class="social-fixed" aria-hidden="true">
-                    <a class="soc" href="#" title="Phone">📞</a>
-                    <a class="soc" href="#" title="Mail">✉️</a>
-                    <a class="soc" href="#" title="Instagram">📷</a>
-                    <a class="soc" href="#" title="Facebook">f</a>
-                    <a class="soc" href="#" title="Tiktok">♪</a>
-                    <a class="soc" href="#" title="Pinterest">Ⓟ</a>
-                </aside>
-            </header>
-
-            <!-- Hero: large centered gold title with dimmed background image effect -->
+      <!-- vertical social buttons on the right (floating) -->
+      <aside class="social-fixed" aria-hidden="true">
+        <a class="soc" href="#" title="Phone">📞</a>
+        <a class="soc" href="#" title="Mail">✉️</a>
+        <a class="soc" href="#" title="Instagram">📷</a>
+        <a class="soc" href="#" title="Facebook">f</a>
+        <a class="soc" href="#" title="Tiktok">♪</a>
+        <a class="soc" href="#" title="Pinterest">Ⓟ</a>
+      </aside>
+    </header>            <!-- Hero: large centered gold title with dimmed background image effect -->
             <section class="hero">
                 <div class="hero-bg"></div>
                 <div class="container hero-inner">
@@ -73,8 +85,9 @@
         <!-- Artists grid -->
         <section id="artists" class="section">
             <div class="container">
-                <h2 class="section-title">Artists</h2>
-                <p class="section-sub">Our resident artists. Click an artist to view a placeholder profile.</p>
+                <h2 class="section-title">LES TATOUEURS DU SALON</h2>
+                <h3 class="section-subtitle">TROUVEZ VOTRE TATOUEUR DANS NOTRE SALON À PARIS</h3>
+                <p class="section-sub">Placeholder description. Replace with your content.</p>
                 <div class="artists-grid">
                     <!-- placeholder artist cards -->
                     <article class="artist-card">
@@ -108,8 +121,9 @@
         <!-- Work / Portfolio -->
         <section id="work" class="section alt">
             <div class="container">
-                <h2 class="section-title">Portfolio</h2>
-                <p class="section-sub">A selection of placeholder images. Replace with gallery images.</p>
+                <h2 class="section-title">VOTRE STYLE !</h2>
+                <h3 class="section-subtitle">NOUS VOUS ACCOMPAGNONS QUELQUE SOIT LE STYLE DE VOTRE PROJET !</h3>
+                <p class="section-sub">Placeholder description. Replace with your content.</p>
                 <div class="gallery-grid">
                     <div class="gallery-item">Image</div>
                     <div class="gallery-item">Image</div>
@@ -123,7 +137,7 @@
         <section id="about" class="section">
             <div class="container two-col">
                 <div>
-                    <h2 class="section-title">About the Studio</h2>
+                    <h2 class="section-title">NOTRE SALON</h2>
                     <p class="section-sub">Placeholder copy about the studio's history, hygiene standards, and philosophy.</p>
                 </div>
                 <div>
@@ -141,7 +155,7 @@
         <!-- Testimonials -->
         <section class="section testimonials">
             <div class="container">
-                <h2 class="section-title">Testimonials</h2>
+                <h2 class="section-title">MERCI POUR VOTRE CONFIANCE</h2>
                 <div class="testimonials-grid">
                     <blockquote class="testimonial">"Great experience — placeholder review."</blockquote>
                     <blockquote class="testimonial">"Professional and friendly — placeholder review."</blockquote>
@@ -153,7 +167,7 @@
         <!-- Contact -->
         <section id="contact" class="section contact">
             <div class="container">
-                <h2 class="section-title">Contact</h2>
+                <h2 class="section-title">PARLEZ-NOUS DE VOTRE PROJET</h2>
                 <p class="section-sub">Send us a message about your project. This is a placeholder contact form — submissions are not wired up.</p>
                 <form class="contact-form" onsubmit="return false;">
                     <div class="form-row">

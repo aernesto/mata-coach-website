@@ -5,7 +5,7 @@
   --bg:#060606;
   --muted:#9b9b9b;
   --white:#ffffff;
-  --gold-1:#b8842b; /* main gold */
+  --gold-1:#c9a86b; /* Brighter gold to match reference more closely */
   --gold-2:#8b6220; /* darker gold */
   --accent:#e6e6e6;
   --container:1200px;
@@ -18,6 +18,150 @@ body{
   -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
 }
 .container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+/* Header & sticky nav */
+.site-header{position:relative}
+
+/* Brand section (scrolls away) */
+.header-brand{background:var(--bg);padding:36px 0 8px;position:relative;z-index:10}
+.header-brand-inner{display:flex;flex-direction:column;align-items:center;gap:6px}
+.brand-title{font-family:Cinzel, serif;color:var(--gold-1);font-size:48px;margin:0;letter-spacing:6px}
+.brand-sub{font-family:Montserrat, sans-serif;color:var(--white);opacity:0.85;font-size:13px;letter-spacing:3px;margin:0}
+.emblem{margin-top:10px}
+
+/* Sticky navigation bar */
+.nav-sticky{
+  position:sticky;
+  top:0;
+  z-index:60;
+  background:linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.75));
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  padding:12px 0;
+}
+.nav-inner{display:flex;align-items:center;justify-content:center;gap:28px}
+.nav-item{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:15px;
+  letter-spacing:1px;
+  position:relative;
+  transition:color 0.2s ease;
+}
+.nav-item:hover{
+  color:var(--gold-1);
+}
+/* First item "Accueil" in gold */
+.nav-item:first-child{
+  color:var(--gold-1);
+}
+
+/* Dropdown styling */
+.nav-dropdown{position:relative}
+.nav-item-dropdown{display:inline-flex;align-items:center;gap:6px}
+.dropdown-arrow{font-size:12px;display:inline-block}
+.dropdown-menu{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background:rgba(0,0,0,0.95);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:4px;
+  margin-top:6px;
+  min-width:180px;
+  z-index:100;
+}
+.dropdown-menu a{
+  display:block;
+  padding:10px 14px;
+  color:var(--muted);
+  text-decoration:none;
+  font-size:14px;
+  transition:color 0.2s ease;
+}
+.dropdown-menu a:hover{
+  color:var(--gold-1);
+}
+.nav-dropdown:hover .dropdown-menu{
+  display:block;
+}
+
+/* Hero */
+.hero{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;padding:40px 0 80px;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)), url('/logo.png');background-size:cover;background-position:center;filter:grayscale(40%) blur(1px);opacity:0.55}
+.hero-inner{position:relative;z-index:2;max-width:900px}
+.hero-deco{font-family:Cinzel, serif;color:var(--gold-1);font-size:96px;letter-spacing:8px;margin:0 0 8px;text-align:center}
+.hero-title{font-family:Montserrat, sans-serif;font-size:22px;margin:0 0 14px;color:var(--white);letter-spacing:3px}
+.hero-sub{color:var(--muted);margin:0 auto 18px;font-size:16px;line-height:1.6}
+
+/* Sections */
+.section{padding:60px 0}
+.section.alt{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005))}
+
+/* Section titles (in gold, Cinzel) */
+.section-title{
+  font-family:Cinzel, serif;
+  font-size:42px;
+  color:var(--gold-1);
+  letter-spacing:4px;
+  margin:0 0 12px;
+  text-align:center;
+}
+.section-subtitle{
+  font-family:Montserrat, sans-serif;
+  font-size:16px;
+  letter-spacing:2px;
+  color:var(--white);
+  margin:0 0 18px;
+  text-align:center;
+}
+.section-sub{color:var(--muted);margin:0 0 22px;text-align:center}
+
+/* Grid layouts */
+.artists-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:18px}
+.artist-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:6px;border:1px solid rgba(255,255,255,0.03);text-align:left}
+.artist-photo{height:160px;background:linear-gradient(180deg, #111, #070707);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin-bottom:12px}
+.artist-name{margin:0 0 6px}
+.artist-styles{color:var(--muted);font-size:13px;margin:0 0 8px}
+.artist-link{color:var(--accent);font-size:13px;text-decoration:none}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery-item{height:180px;background:#111;border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+.two-col{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:start}
+.features{color:var(--muted);padding-left:18px}
+
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.testimonial{background:#0e0e0e;padding:18px;border-radius:6px;border:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+
+.contact-form{max-width:760px;margin-top:12px}
+.contact-form .form-row{display:flex;gap:12px;margin-bottom:12px}
+.contact-form input,.contact-form textarea{width:100%;padding:12px;border-radius:6px;background:#0c0c0c;border:1px solid rgba(255,255,255,0.04);color:var(--white)}
+.contact-form .form-actions{text-align:right;margin-top:12px}
+
+.site-footer{border-top:1px solid rgba(255,255,255,0.04);padding:24px 0;margin-top:40px}
+.footer-inner{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
+
+/* Vertical social fixed */
+.social-fixed{position:fixed;right:12px;top:42%;display:flex;flex-direction:column;gap:10px;z-index:80}
+.social-fixed .soc{width:44px;height:44px;border-radius:22px;border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;color:var(--gold-1);background:rgba(0,0,0,0.35);text-decoration:none}
+
+/* Responsive */
+@media (max-width:1000px){
+  .artists-grid,.gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .two-col{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .nav-inner{gap:12px;font-size:13px}
+  .nav-item{font-size:13px}
+  .artists-grid,.gallery-grid{grid-template-columns:1fr}
+  .hero-deco{font-size:48px;letter-spacing:4px}
+  .hero-title{font-size:18px}
+  .section-title{font-size:28px}
+  .testimonials-grid{grid-template-columns:1fr}
+  .social-fixed{display:none}
+}
 
 /* Header */
 .site-header{border-bottom:1px solid rgba(255,255,255,0.06);position:sticky;top:0;background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2));backdrop-filter:blur(6px);z-index:60}
