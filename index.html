@@ -1,199 +1,254 @@
 <!doctype html>
-<html lang="en">
-        <head>
-            <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <title>Placeholder — Mystery Style</title>
-            <meta name="description" content="Placeholder site matching a dark, monochrome studio layout. Replace content with your own." />
-            <!-- Display and UI fonts chosen to approximate the reference site -->
-            <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="/css/styles.css">
-        </head>
-    <body>
-    <!-- Header: centered branding (scrolls away) + sticky nav bar -->
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MATA COACHING — Studio & Performance</title>
+    <meta name="description" content="Coaching de performance et studio exclusif." />
+    
+    <!-- Fonts: Cinzel for headers, Montserrat for body (matches the reference style) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="loading">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-logo">
+            <img src="mata-coaching-logo-filled-disk-edit1.png" alt="Loading...">
+        </div>
+    </div>
+
+    <!-- Header: Centered Brand + Sticky Nav -->
     <header class="site-header">
-      <!-- Top section: Brand + emblem (hides on scroll) -->
-      <div class="header-brand">
-        <div class="container header-brand-inner">
-          <div class="brand-wrap">
-            <h1 class="brand-title">MYSTERY TATTOO CLUB</h1>
-            <p class="brand-sub">SALON DE TATOUAGE À PARIS</p>
-          </div>
-          <!-- decorative emblem (placeholder) -->
-          <div class="emblem" aria-hidden="true">
-            <svg width="220" height="80" viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="g" x1="0" x2="1">
-                  <stop offset="0" stop-color="#b88a32" />
-                  <stop offset="1" stop-color="#7a5a28" />
-                </linearGradient>
-              </defs>
-              <g fill="url(#g)">
-                <path d="M110 6c18 0 32 10 32 22s-14 22-32 22-32-10-32-22 14-22 32-22z" opacity="0.95"/>
-                <rect x="104" y="20" width="12" height="40" rx="6"/>
-                <path d="M48 40c14-8 40-12 62-12s48 4 62 12" stroke="#6b4b1f" stroke-width="1" fill="none"/>
-              </g>
-            </svg>
-          </div>
+        <!-- Top Brand Section (Scrolls away) -->
+        <div class="header-brand">
+            <div class="container header-brand-inner">
+                <div class="brand-logo">
+                    <img src="mata-coaching-logo-filled-disk-edit1.png" alt="Mata Coaching Emblem" class="emblem-img">
+                </div>
+                <h1 class="brand-title">MATA COACHING</h1>
+                <div class="separator-gold"></div>
+                <p class="brand-sub">PERFORMANCE & ÉLÉGANCE À PARIS</p>
+            </div>
         </div>
-      </div>
 
-      <!-- Sticky nav bar -->
-      <nav class="nav-sticky">
-        <div class="container nav-inner">
-          <a href="#" class="nav-item">Accueil</a>
-          <div class="nav-dropdown">
-            <a href="#artists" class="nav-item nav-item-dropdown">Artistes <span class="dropdown-arrow">▼</span></a>
-            <div class="dropdown-menu">
-              <a href="#">Artist One</a>
-              <a href="#">Artist Two</a>
+        <!-- Sticky Navigation -->
+        <nav class="nav-sticky" id="navbar">
+            <div class="container nav-inner">
+                <a href="#" class="nav-item active">ACCUEIL</a>
+                
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-item">SERVICES <span class="arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Coaching Individuel</a>
+                        <a href="#">Préparation Mentale</a>
+                        <a href="#">Nutrition</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <a href="#team" class="nav-item">L'ÉQUIPE <span class="arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Nos Coachs</a>
+                        <a href="#">Philosophie</a>
+                    </div>
+                </div>
+
+                <a href="#tarifs" class="nav-item">TARIFS</a>
+                <a href="#faq" class="nav-item">FAQ</a>
+                <a href="#contact" class="nav-item">CONTACT</a>
             </div>
-          </div>
-          <div class="nav-dropdown">
-            <a href="#hygiene" class="nav-item nav-item-dropdown">Hygiène & Soins <span class="dropdown-arrow">▼</span></a>
-            <div class="dropdown-menu">
-              <a href="#">Hygiene Info</a>
-              <a href="#">Care Guide</a>
-            </div>
-          </div>
-          <a href="#tarifs" class="nav-item">Tarifs</a>
-          <a href="#faq" class="nav-item">FAQ</a>
-          <a href="#actu" class="nav-item">Actu</a>
-          <a href="#contact" class="nav-item">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Social Side Bar (Fixed) -->
+    <aside class="social-fixed">
+        <a href="#" class="soc-link">INSTAGRAM</a>
+        <a href="#" class="soc-link">FACEBOOK</a>
+        <a href="#" class="soc-link">TIKTOK</a>
+    </aside>
+
+    <!-- Hero Section -->
+    <section class="hero parallax-bg">
+        <div class="overlay"></div>
+        <div class="container hero-content fade-in-up">
+            <h2 class="hero-big-text">MATA COACHING</h2>
+            <h3 class="hero-subtitle">RÉVÉLEZ VOTRE POTENTIEL</h3>
+            <p class="hero-desc">
+                Un accompagnement d'exception pour des résultats durables.
+                Votre transformation commence ici.
+            </p>
+            <a href="#contact" class="btn btn-gold">PRENDRE RENDEZ-VOUS</a>
         </div>
-      </nav>
+    </section>
 
-      <!-- vertical social buttons on the right (floating) -->
-      <aside class="social-fixed" aria-hidden="true">
-        <a class="soc" href="#" title="Phone">📞</a>
-        <a class="soc" href="#" title="Mail">✉️</a>
-        <a class="soc" href="#" title="Instagram">📷</a>
-        <a class="soc" href="#" title="Facebook">f</a>
-        <a class="soc" href="#" title="Tiktok">♪</a>
-        <a class="soc" href="#" title="Pinterest">Ⓟ</a>
-      </aside>
-    </header>            <!-- Hero: large centered gold title with dimmed background image effect -->
-            <section class="hero">
-                <div class="hero-bg"></div>
-                <div class="container hero-inner">
-                    <h2 class="hero-deco">MYSTERY TATTOO CLUB</h2>
-                    <h1 class="hero-title">VOUS ÊTES À LA RECHERCHE D'UN TATOUEUR À PARIS ?</h1>
-                    <p class="hero-sub">Que ce soit pour un premier tatouage ou un projet plus complexe, choisir le bon tatoueur est essentiel pour obtenir un résultat de qualité. Placeholder paragraph to be replaced.</p>
-                </div>
-            </section>
+    <!-- Intro / Philosophy Section -->
+    <section class="section section-dark">
+        <div class="container text-center fade-in-up">
+            <img src="mata-coaching-logo-circle-line-edit1.png" alt="Decoration" class="section-icon">
+            <h2 class="section-title">L'EXCELLENCE COMME STANDARD</h2>
+            <div class="separator-gold"></div>
+            <p class="section-text-max">
+                Nous ne sommes pas une simple salle de sport. Nous sommes un sanctuaire dédié à la performance humaine. 
+                Chaque détail a été pensé pour vous offrir une expérience unique.
+            </p>
+        </div>
+    </section>
 
-        <!-- Artists grid -->
-        <section id="artists" class="section">
-            <div class="container">
-                <h2 class="section-title">LES TATOUEURS DU SALON</h2>
-                <h3 class="section-subtitle">TROUVEZ VOTRE TATOUEUR DANS NOTRE SALON À PARIS</h3>
-                <p class="section-sub">Placeholder description. Replace with your content.</p>
-                <div class="artists-grid">
-                    <!-- placeholder artist cards -->
-                    <article class="artist-card">
-                        <div class="artist-photo">Image</div>
-                        <h3 class="artist-name">Artist One</h3>
-                        <p class="artist-styles">Blackwork • Traditional • Custom</p>
-                        <a class="artist-link" href="#">View</a>
-                    </article>
-                    <article class="artist-card">
-                        <div class="artist-photo">Image</div>
-                        <h3 class="artist-name">Artist Two</h3>
-                        <p class="artist-styles">Fine Line • Floral • Portrait</p>
-                        <a class="artist-link" href="#">View</a>
-                    </article>
-                    <article class="artist-card">
-                        <div class="artist-photo">Image</div>
-                        <h3 class="artist-name">Artist Three</h3>
-                        <p class="artist-styles">Neo-trad • Color • Cover-up</p>
-                        <a class="artist-link" href="#">View</a>
-                    </article>
-                    <article class="artist-card">
-                        <div class="artist-photo">Image</div>
-                        <h3 class="artist-name">Artist Four</h3>
-                        <p class="artist-styles">Blackwork • Dotwork • Geometric</p>
-                        <a class="artist-link" href="#">View</a>
-                    </article>
-                </div>
+    <!-- Grid Section (Coaches/Artists equivalent) -->
+    <section id="team" class="section section-black">
+        <div class="container">
+            <h2 class="section-title text-center">NOS EXPERTS</h2>
+            <p class="section-sub text-center">UNE ÉQUIPE DÉDIÉE À VOTRE RÉUSSITE</p>
+            
+            <div class="grid-4">
+                <!-- Card 1 -->
+                <article class="card fade-in-up">
+                    <div class="card-image" style="background-image: url('manualtangent.png');"></div>
+                    <div class="card-info">
+                        <h3>ALEXANDRE</h3>
+                        <span>Performance</span>
+                        <a href="#">VOIR LE PROFIL</a>
+                    </div>
+                </article>
+                <!-- Card 2 -->
+                <article class="card fade-in-up" style="transition-delay: 0.1s">
+                    <div class="card-image" style="background-image: url('logo.png');"></div>
+                    <div class="card-info">
+                        <h3>SARAH</h3>
+                        <span>Nutrition</span>
+                        <a href="#">VOIR LE PROFIL</a>
+                    </div>
+                </article>
+                <!-- Card 3 -->
+                <article class="card fade-in-up" style="transition-delay: 0.2s">
+                    <div class="card-image" style="background-image: url('manualtangent.png');"></div>
+                    <div class="card-info">
+                        <h3>THOMAS</h3>
+                        <span>Force</span>
+                        <a href="#">VOIR LE PROFIL</a>
+                    </div>
+                </article>
+                <!-- Card 4 -->
+                <article class="card fade-in-up" style="transition-delay: 0.3s">
+                    <div class="card-image" style="background-image: url('logo.png');"></div>
+                    <div class="card-info">
+                        <h3>JULIE</h3>
+                        <span>Yoga & Mobilité</span>
+                        <a href="#">VOIR LE PROFIL</a>
+                    </div>
+                </article>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Work / Portfolio -->
-        <section id="work" class="section alt">
-            <div class="container">
-                <h2 class="section-title">VOTRE STYLE !</h2>
-                <h3 class="section-subtitle">NOUS VOUS ACCOMPAGNONS QUELQUE SOIT LE STYLE DE VOTRE PROJET !</h3>
-                <p class="section-sub">Placeholder description. Replace with your content.</p>
-                <div class="gallery-grid">
-                    <div class="gallery-item">Image</div>
-                    <div class="gallery-item">Image</div>
-                    <div class="gallery-item">Image</div>
-                    <div class="gallery-item">Image</div>
-                </div>
-            </div>
-        </section>
+    <!-- Parallax Break Section -->
+    <section class="parallax-break parallax-bg">
+        <div class="overlay-strong"></div>
+        <div class="container text-center content-break fade-in-up">
+            <h2>"LA DOULEUR EST TEMPORAIRE, LA GLOIRE EST ÉTERNELLE"</h2>
+        </div>
+    </section>
 
-        <!-- About -->
-        <section id="about" class="section">
-            <div class="container two-col">
-                <div>
-                    <h2 class="section-title">NOTRE SALON</h2>
-                    <p class="section-sub">Placeholder copy about the studio's history, hygiene standards, and philosophy.</p>
-                </div>
-                <div>
-                    <p>Short bullets or features:</p>
-                    <ul class="features">
-                        <li>Experienced artists</li>
-                        <li>High hygiene standards</li>
-                        <li>On-site consultations</li>
-                        <li>Custom pieces</li>
+    <!-- Gallery / Style Section -->
+    <section id="services" class="section section-dark">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-text fade-in-up">
+                    <h2 class="section-title text-left">VOTRE STYLE DE VIE</h2>
+                    <div class="separator-gold text-left"></div>
+                    <p>
+                        Que vous cherchiez à gagner en masse musculaire, à perdre du poids ou simplement à retrouver une hygiène de vie saine,
+                        nous adaptons nos méthodes à votre quotidien.
+                    </p>
+                    <ul class="gold-list">
+                        <li>Programmes sur mesure</li>
+                        <li>Suivi nutritionnel quotidien</li>
+                        <li>Accès privé au studio</li>
                     </ul>
+                    <a href="#" class="btn btn-outline">DÉCOUVRIR LES PROGRAMMES</a>
+                </div>
+                <div class="split-grid fade-in-up">
+                    <div class="grid-item"></div> <!-- Placeholders for gallery images -->
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Testimonials -->
-        <section class="section testimonials">
-            <div class="container">
-                <h2 class="section-title">MERCI POUR VOTRE CONFIANCE</h2>
-                <div class="testimonials-grid">
-                    <blockquote class="testimonial">"Great experience — placeholder review."</blockquote>
-                    <blockquote class="testimonial">"Professional and friendly — placeholder review."</blockquote>
-                    <blockquote class="testimonial">"Amazing work — placeholder review."</blockquote>
+    <!-- FAQ / Info Section -->
+    <section id="faq" class="section section-black">
+        <div class="container">
+            <h2 class="section-title text-center">QUESTIONS FRÉQUENTES</h2>
+            <div class="faq-grid">
+                <div class="faq-item fade-in-up">
+                    <h4>PUIS-JE RÉSERVER UNE SÉANCE D'ESSAI ?</h4>
+                    <p>Oui, nous proposons une première séance bilan offerte pour évaluer vos objectifs.</p>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <h4>QUELS SONT LES TARIFS ?</h4>
+                    <p>Nos tarifs varient selon la fréquence et la durée de l'engagement. Contactez-nous pour un devis.</p>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <h4>OÙ ÊTES-VOUS SITUÉS ?</h4>
+                    <p>Nous sommes situés au cœur de Paris. L'adresse exacte est communiquée lors de la prise de rendez-vous.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact -->
-        <section id="contact" class="section contact">
-            <div class="container">
-                <h2 class="section-title">PARLEZ-NOUS DE VOTRE PROJET</h2>
-                <p class="section-sub">Send us a message about your project. This is a placeholder contact form — submissions are not wired up.</p>
-                <form class="contact-form" onsubmit="return false;">
-                    <div class="form-row">
-                        <input type="text" placeholder="First name" required>
-                        <input type="text" placeholder="Last name" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="email" placeholder="Email" required>
-                        <input type="tel" placeholder="Phone">
-                    </div>
-                    <textarea placeholder="Tell us about your project" rows="6" required></textarea>
-                    <div class="form-actions">
-                        <button class="btn btn-solid" type="submit">Send (placeholder)</button>
-                    </div>
-                </form>
+    <!-- Contact Section -->
+    <section id="contact" class="section section-dark">
+        <div class="container text-center contact-wrapper fade-in-up">
+            <h2 class="section-title">CONTACTEZ-NOUS</h2>
+            <p class="section-sub">PRÊT À COMMENCER VOTRE TRANSFORMATION ?</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/your-id-here" method="POST">
+                <!-- Note: Action URL needs to be replaced with your actual Formspree/backend URL -->
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="VOTRE NOM" required>
+                    <input type="email" name="email" placeholder="VOTRE EMAIL" required>
+                </div>
+                <input type="text" name="subject" placeholder="SUJET" required>
+                <textarea name="message" rows="5" placeholder="VOTRE MESSAGE" required></textarea>
+                <button type="submit" class="btn btn-gold full-width">ENVOYER</button>
+            </form>
+            <p class="form-note">Ce formulaire est configuré pour une démo. Sur GitHub Pages, utilisez un service comme Formspree.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="mata-coaching-logo-filled-disk-edit1.png" alt="Logo Footer" class="footer-logo">
+                <p>Mata Coaching © 2025</p>
             </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="site-footer">
-            <div class="container footer-inner">
-                <div class="footer-left">Placeholder Studio — 2025</div>
-                <div class="footer-right">Phone • Email • Socials (placeholders)</div>
+            <div class="footer-col">
+                <h5>STUDIO</h5>
+                <p>Paris, France<br>Uniquement sur RDV</p>
             </div>
-        </footer>
+            <div class="footer-col">
+                <h5>CONTACT</h5>
+                <p>contact@matacoach.com<br>+33 6 00 00 00 00</p>
+            </div>
+            <div class="footer-col">
+                <h5>RÉSEAUX</h5>
+                <div class="footer-socials">
+                    <a href="#">IG</a>
+                    <a href="#">FB</a>
+                    <a href="#">TK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        <script src="/js/main.js"></script>
-    </body>
+    <script src="js/main.js"></script>
+</body>
 </html>
