@@ -1,0 +1,80 @@
+/* Minimal, dark monochrome studio style inspired by the reference site.
+   All content in this repo is placeholder — replace images and text as needed. */
+
+:root{
+  --bg:#0b0b0b;
+  --muted:#8b8b8b;
+  --white:#ffffff;
+  --accent:#e6e6e6;
+  --container:1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;padding:0;background:var(--bg);color:var(--white);font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+/* Header */
+.site-header{border-bottom:1px solid rgba(255,255,255,0.06);position:sticky;top:0;background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2));backdrop-filter:blur(6px);z-index:60}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font-weight:700;letter-spacing:1px;color:var(--white);text-decoration:none}
+.main-nav{display:flex;gap:22px;align-items:center}
+.main-nav a{color:var(--accent);text-decoration:none;font-size:14px}
+.main-nav a.cta{border:1px solid rgba(255,255,255,0.08);padding:8px 12px;border-radius:3px}
+.menu-toggle{display:none;background:none;border:0;color:var(--white);font-size:20px}
+
+/* Hero */
+.hero{padding:80px 0 60px;text-align:center}
+.hero-title{font-size:52px;margin:0 0 10px;letter-spacing:2px}
+.hero-sub{color:var(--muted);margin:0 0 22px;font-size:18px}
+.hero-actions{display:flex;gap:12px;justify-content:center}
+.btn{display:inline-block;padding:12px 18px;border-radius:4px;text-decoration:none}
+.btn-outline{border:1px solid rgba(255,255,255,0.08);color:var(--accent)}
+.btn-solid{background:var(--white);color:var(--bg);font-weight:600}
+
+/* Sections */
+.section{padding:60px 0}
+.section.alt{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+.section-title{font-size:28px;margin:0 0 8px}
+.section-sub{color:var(--muted);margin:0 0 22px}
+
+/* Grid layouts */
+.artists-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.artist-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:6px;border:1px solid rgba(255,255,255,0.03);text-align:left}
+.artist-photo{height:160px;background:linear-gradient(180deg, #222, #111);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin-bottom:12px}
+.artist-name{margin:0 0 6px}
+.artist-styles{color:var(--muted);font-size:13px;margin:0 0 8px}
+.artist-link{color:var(--accent);font-size:13px;text-decoration:none}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery-item{height:180px;background:#111;border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+.two-col{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:start}
+.features{color:var(--muted);padding-left:18px}
+
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.testimonial{background:#0e0e0e;padding:18px;border-radius:6px;border:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+
+.contact-form{max-width:760px;margin-top:12px}
+.contact-form .form-row{display:flex;gap:12px;margin-bottom:12px}
+.contact-form input,.contact-form textarea{width:100%;padding:12px;border-radius:6px;background:#0c0c0c;border:1px solid rgba(255,255,255,0.04);color:var(--white)}
+.contact-form .form-actions{text-align:right;margin-top:12px}
+
+.site-footer{border-top:1px solid rgba(255,255,255,0.04);padding:20px 0;margin-top:40px}
+.footer-inner{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
+
+/* Responsive */
+@media (max-width:1000px){
+  .artists-grid,.gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .two-col{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .main-nav{display:none}
+  .menu-toggle{display:block}
+  .artists-grid,.gallery-grid{grid-template-columns:1fr}
+  .hero-title{font-size:36px}
+  .testimonials-grid{grid-template-columns:1fr}
+}
