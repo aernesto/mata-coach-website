@@ -1,38 +1,74 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Placeholder — Mystery Style</title>
-        <meta name="description" content="Placeholder site matching a dark, monochrome studio layout. Replace content with your own." />
-        <link rel="stylesheet" href="/css/styles.css">
-    </head>
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <title>Placeholder — Mystery Style</title>
+            <meta name="description" content="Placeholder site matching a dark, monochrome studio layout. Replace content with your own." />
+            <!-- Display and UI fonts chosen to approximate the reference site -->
+            <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="/css/styles.css">
+        </head>
     <body>
-        <!-- Header -->
-        <header class="site-header">
-            <div class="container header-inner">
-                <a class="logo" href="#">Placeholder Studio</a>
-                <nav class="main-nav">
-                    <a href="#artists">Artists</a>
-                    <a href="#work">Work</a>
-                    <a href="#about">About</a>
-                    <a href="#contact" class="cta">Contact</a>
-                </nav>
-                <button id="menu-toggle" class="menu-toggle">☰</button>
-            </div>
-        </header>
-
-        <!-- Hero -->
-        <section class="hero">
-            <div class="container hero-inner">
-                <h1 class="hero-title">STUDIO NAME</h1>
-                <p class="hero-sub">A short tagline about the studio. Replace with your own text.</p>
-                <div class="hero-actions">
-                    <a href="#artists" class="btn btn-outline">Discover Artists</a>
-                    <a href="#contact" class="btn btn-solid">Book an Appointment</a>
+            <!-- Header: centered crest + nav beneath to match reference layout -->
+            <header class="site-header">
+                <div class="header-top">
+                    <div class="container header-top-inner">
+                        <div class="brand-wrap">
+                            <h1 class="brand-title">MYSTERY TATTOO CLUB</h1>
+                            <p class="brand-sub">SALON DE TATOUAGE À PARIS</p>
+                        </div>
+                        <!-- decorative emblem (placeholder) -->
+                        <div class="emblem" aria-hidden="true">
+                            <!-- stylized ornamental svg, decorative only -->
+                            <svg width="220" height="80" viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="g" x1="0" x2="1">
+                                        <stop offset="0" stop-color="#b88a32" />
+                                        <stop offset="1" stop-color="#7a5a28" />
+                                    </linearGradient>
+                                </defs>
+                                <g fill="url(#g)">
+                                    <path d="M110 6c18 0 32 10 32 22s-14 22-32 22-32-10-32-22 14-22 32-22z" opacity="0.95"/>
+                                    <rect x="104" y="20" width="12" height="40" rx="6"/>
+                                    <path d="M48 40c14-8 40-12 62-12s48 4 62 12" stroke="#6b4b1f" stroke-width="1" fill="none"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+
+                <div class="container nav-row">
+                    <nav class="main-nav">
+                        <a href="#">Accueil</a>
+                        <a href="#artists">Artistes</a>
+                        <a href="#hygiene">Hygiène & Soins</a>
+                        <a href="#tarifs">Tarifs</a>
+                        <a href="#faq">FAQ</a>
+                        <a href="#contact" class="cta">Contact</a>
+                    </nav>
+                </div>
+
+                <!-- vertical social buttons on the right (floating) -->
+                <aside class="social-fixed" aria-hidden="true">
+                    <a class="soc" href="#" title="Phone">📞</a>
+                    <a class="soc" href="#" title="Mail">✉️</a>
+                    <a class="soc" href="#" title="Instagram">📷</a>
+                    <a class="soc" href="#" title="Facebook">f</a>
+                    <a class="soc" href="#" title="Tiktok">♪</a>
+                    <a class="soc" href="#" title="Pinterest">Ⓟ</a>
+                </aside>
+            </header>
+
+            <!-- Hero: large centered gold title with dimmed background image effect -->
+            <section class="hero">
+                <div class="hero-bg"></div>
+                <div class="container hero-inner">
+                    <h2 class="hero-deco">MYSTERY TATTOO CLUB</h2>
+                    <h1 class="hero-title">VOUS ÊTES À LA RECHERCHE D'UN TATOUEUR À PARIS ?</h1>
+                    <p class="hero-sub">Que ce soit pour un premier tatouage ou un projet plus complexe, choisir le bon tatoueur est essentiel pour obtenir un résultat de qualité. Placeholder paragraph to be replaced.</p>
+                </div>
+            </section>
 
         <!-- Artists grid -->
         <section id="artists" class="section">
