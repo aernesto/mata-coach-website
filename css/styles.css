@@ -46,9 +46,9 @@ ul { list-style: none; padding: 0; }
 .site-header { position: relative; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.05); }
 
 .header-brand { padding: 40px 0 20px; background: var(--bg-black); text-align: center; }
-.brand-logo .emblem-img { width: 80px; margin-bottom: 15px; }
+.brand-logo .emblem-img { width: 260px; margin-bottom: 15px; }
 .brand-title { font-size: 3rem; letter-spacing: 8px; color: var(--gold); }
-.brand-sub { font-size: 0.8rem; letter-spacing: 4px; color: var(--gray); margin-top: 10px; }
+.brand-sub { font-size: 0.8rem; letter-spacing: 4px; color: var(--white); margin-top: 10px; }
 
 .separator-gold { 
     height: 1px; width: 60px; background: var(--gold); margin: 15px auto; 
@@ -66,20 +66,24 @@ ul { list-style: none; padding: 0; }
 
 .nav-inner { display: flex; justify-content: center; gap: 40px; }
 .nav-item { 
-    font-size: 0.85rem; letter-spacing: 2px; color: var(--gray); 
+    font-size: 0.85rem; letter-spacing: 2px; color: var(--white); 
     position: relative; 
 }
 .nav-item:hover, .nav-item.active { color: var(--gold); }
 
 /* Dropdown */
-.nav-dropdown { position: relative; }
+.nav-dropdown { 
+    position: relative; 
+    /* color: var(--white); */
+}
 .dropdown-menu {
+    /* color: var(--white); */
     display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
     background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.1);
     min-width: 180px; padding: 10px 0; text-align: center;
 }
 .nav-dropdown:hover .dropdown-menu { display: block; }
-.dropdown-menu a { display: block; padding: 10px 20px; font-size: 0.8rem; color: var(--gray); }
+.dropdown-menu a { display: block; padding: 10px 20px; font-size: 0.8rem; color: var(--white); }
 .dropdown-menu a:hover { color: var(--gold); background: rgba(255,255,255,0.02); }
 
 /* --- Hero & Parallax --- */
