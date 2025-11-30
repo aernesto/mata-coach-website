@@ -3,7 +3,8 @@
     --bg-black: #050505;
     --bg-dark: #0f0f0f;
     --bg-card: #141414;
-    --gold: #c9a86b; /* The primary gold color */
+    --gold: #b0834b; /* The primary gold color */
+    --green: #275c43; /* The primary gold color */
     --gold-dim: #8c7343;
     --white: #ffffff;
     --gray: #888888;
@@ -11,7 +12,10 @@
     --font-body: 'Montserrat', sans-serif;
 }
 
-html { scroll-behavior: smooth; }
+html { 
+    scroll-behavior: smooth; 
+    -webkit-text-size-adjust: 100%;
+}
 body {
     margin: 0; padding: 0;
     background-color: var(--bg-black);
@@ -43,11 +47,50 @@ ul { list-style: none; padding: 0; }
 @keyframes pulse { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
 
 /* --- Header & Nav --- */
+/* header { padding-top: 20px; } */
 .site-header { position: relative; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.05); }
 
-.header-brand { padding: 40px 0 20px; background: var(--bg-black); text-align: center; }
+.header-brand { 
+    /* padding: 40px 0 20px;  */
+    padding-top: 20px;
+    background: var(--bg-black); 
+    text-align: center; 
+}
 .brand-logo .emblem-img { width: 260px; margin-bottom: 15px; }
-.brand-title { font-size: 3rem; letter-spacing: 8px; color: var(--gold); }
+
+.fancy-caps span {
+  display: inline-block;
+  line-height: 1;
+}
+/* .fancy-caps span::first-letter {
+  font-size: 130%;
+} */
+
+/* .brand-title { 
+    font-size: 28px; 
+    letter-spacing: 1px; 
+    color: var(--gold); 
+    filter:brightness(1.4); 
+    font-family: "Cormorant SC", Sans-serif;
+    font-weight: 450;
+    text-align: center;
+    margin-block-end: 1rem;
+    margin-block-start: .5rem;
+    box-sizing: border-box;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+} */
+
+.brand-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;          /* slightly taller */
+  font-weight: 595;           /* lighter like the reference */
+  letter-spacing: .58px;        /* less spacing than yours */
+  color: #b78a56;             /* warmer bronze tone */
+  text-transform: none;       /* official site uses true capitals, not forced caps */
+  /* margin-top: 40px;            */
+}
 .brand-sub { font-size: 0.8rem; letter-spacing: 4px; color: var(--white); margin-top: 10px; }
 
 .separator-gold { 
@@ -116,7 +159,11 @@ ul { list-style: none; padding: 0; }
 .section-dark { background: var(--bg-dark); }
 .section-black { background: var(--bg-black); }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.container { 
+    max-width: 1200px;
+    margin: 0 auto; 
+    /* padding: 0 20px;  */
+}
 .section-title { font-size: 2.5rem; letter-spacing: 5px; color: var(--gold); margin-bottom: 10px; }
 .section-sub { letter-spacing: 3px; color: var(--gray); font-size: 0.9rem; margin-bottom: 50px; }
 .section-text-max { max-width: 700px; margin: 0 auto; color: #aaa; line-height: 2; font-size: 1.1rem; }
@@ -182,9 +229,19 @@ input:focus, textarea:focus { outline: none; border-color: var(--gold); }
     .grid-4 { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; text-align: center; }
     .social-fixed { display: none; }
-    .brand-title { font-size: 2rem; }
 }
 
+
+/* large laptop / desktop */
+@media (min-width: 1200px) {
+  .brand-title {
+    font-size: 2.8rem;     /* bigger title */
+    letter-spacing: 1.1px;        /* less spacing than yours */
+    font-weight: 599;           /* lighter like the reference */
+    margin-top: 24px;      /* more top padding */
+    margin-bottom: 1rem;
+  }
+}
 /* --- Coach Specific --- */
 .coach-profile { padding-top: 50px; }
 .coach-subtitle { color: var(--gold-dim); letter-spacing: 3px; font-size: 1rem; margin-bottom: 20px; }
