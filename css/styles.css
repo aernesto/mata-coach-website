@@ -242,6 +242,35 @@ input:focus, textarea:focus { outline: none; border-color: var(--gold); }
     margin-bottom: 1rem;
   }
 }
+
+/* Default = wide layout */
+.logo-wide, .nav-wide { display: block; }
+.logo-narrow, .nav-narrow { display: none; }
+
+/* Narrow window */
+@media (max-width: 900px) {
+  .logo-wide, .nav-wide { display: none; }
+  .logo-narrow, .nav-narrow { display: block; }
+}
+
+.mobile-menu { display: none; }
+.mobile-menu.open { display: block; }
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: white;
+  display: block;
+}
 /* --- Coach Specific --- */
 .coach-profile { padding-top: 50px; }
 .coach-subtitle { color: var(--gold-dim); letter-spacing: 3px; font-size: 1rem; margin-bottom: 20px; }

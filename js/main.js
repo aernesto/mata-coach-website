@@ -44,4 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.remove('scrolled');
         }
     });
+    document.querySelector('.hamburger').addEventListener('click', function () {
+        document.querySelector('.mobile-menu').classList.toggle('open');
+});
 });
